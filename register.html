@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html>
+	
+	<head>
+		<title>Blue Developers Directory</title>
+		<link rel= "stylesheet" type="text/css" href="style1.css">
+		<style>
+			#map{width:400px; height:250px; float:left}
+		</style>
+	</head>
+	
+	<body>
+		<div id="container">   <!-- container starts -->
+		
+			<header>
+	
+				<h1><span class ="blue-text">Blue</span> Developers Directory</h1>
+				<h2>Find A Developer <span class="white-text">NOW<span></h2>
+			</header> <!--header ends -->
+			
+			<nav id="menu">
+				<ul>
+					<li><a href ="index.html">Home</a></li>
+					<li><a href="about.html">About Us</a></li>
+					<li><a href="browse.html">Browse Developers</a></li>
+					<li><a href="register.html">Register As A Developer</a></li>
+					<li><a href="contact.html">Contact Us</a></li>
+				</ul>
+			</nav>
+			
+			<nav id="leftmenu">
+		
+				<h3>Links</h3>
+		
+				<ul>
+					<li><a href ="browse.html">SQL</a></li>
+					<li><a href ="browse.html">Php</a></li>
+					<li><a href ="browse.html">Ajax</a></li>
+					<li><a href ="browse.html">Jquery</a></li>
+					<li><a href ="browse.html">Web Design</a></li>
+					<li><a href ="browse.html">Web Programming</a></li>
+					<li><a href ="browse.html">Content Creation</a></li>
+					<li><a href ="browse.html">Internet Marketing</a></li>
+					<li><a href ="browse.html">XHTML Templates</a></li>
+				</ul>
+			</nav>
+			
+			<section>
+				<h3>Register As A Developer</h3>
+				
+				<form>
+					<p>
+						<label for="name">Full Name:</label>
+						<input type="text" name="name">
+					</p>
+					
+					<p>
+						<label for ="email">Email:</label>
+						<input type="email" name="email">
+					</p>
+					
+					
+					
+					<p>
+						<label for="location">Location:</label>
+						<div id="map"></div>
+					</p>
+					<div style="clear:both"></div>
+					
+					
+					
+					<p>
+						<input type="submit" value="Register">
+					</p>
+			</form>
+					
+					<script>
+						if (navigator.geolocation) {
+			var timeoutVal = 10 * 1000 * 1000;
+			navigator.geolocation.getCurrentPosition(
+				displayPosition, 
+				displayError,
+				{ enableHighAccuracy: true, timeout: timeoutVal, maximumAge: 0 }
+			);
+		}
+		else {
+			alert("Geolocation is not supported by this browser");
+		}
+		function displayPosition(position) {
+			var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+			var options = {
+				zoom: 10,
+				center: pos,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			};
+			var map = new google.maps.Map(document.getElementById("map"), options);
+			var marker = new google.maps.Marker({
+				position: pos,
+				map: map,
+				title: "User location"
+			});
+			var contentString = "<b>Timestamp:</b> " + parseTimestamp(position.timestamp) + "<br/><b>User location:</b> lat " + position.coords.latitude + ", long " + position.coords.longitude + ", accuracy " + position.coords.accuracy;
+			var infowindow = new google.maps.InfoWindow({
+				content: contentString
+			});
+			google.maps.event.addListener(marker, 'click', function() {
+				infowindow.open(map,marker);
+			});
+		}
+		function displayError(error) {
+			var errors = { 
+				1: 'Permission denied',
+				2: 'Position unavailable',
+				3: 'Request timeout'
+			};
+			alert("Error: " + errors[error.code]);
+		}
+		function parseTimestamp(timestamp) {
+			var d = new Date(timestamp);
+			var day = d.getDate();
+			var month = d.getMonth() + 1;
+			var year = d.getFullYear();
+			var hour = d.getHours();
+			var mins = d.getMinutes();
+			var secs = d.getSeconds();
+			var msec = d.getMilliseconds();
+			return day + "." + month + "." + year + " " + hour + ":" + mins + ":" + secs + "," + msec;
+		}
+						 
+						
+					</script>
+					
+				
+
+			</section>
+		</div>  <!--container ends-->	
+		<div style="clear:both"></div>
+		<footer>
+		@Aashis
+		</footer>
+	</body>
+</html>

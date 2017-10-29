@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html>
+	
+	<head>
+		<title>Blue Developers Directory</title>
+		<link rel= "stylesheet" type="text/css" href="style1.css">
+	</head>
+	
+	<body>
+		<div id="container">   <!-- container starts -->
+		
+			<header>
+	
+				<h1><span class ="blue-text">Blue</span> Developers Directory</h1>
+				<h2>Find A Developer <span class="white-text">NOW<span></h2>
+			</header> <!--header ends -->
+			
+			<nav id="menu">
+				<ul>
+					<li><a href ="index.html">Home</a></li>
+					<li><a href="about.html">About Us</a></li>
+					<li><a href="browse.html">Browse Developers</a></li>
+					<li><a href="register.html">Register As A Developer</a></li>
+					<li><a href="contact.html">Contact Us</a></li>
+				</ul>
+			</nav>
+			
+			<nav id="leftmenu">
+		
+				<h3>Links</h3>
+		
+				<ul>
+					<li><a href ="browse.html">SQL</a></li>
+					<li><a href ="browse.html">Php</a></li>
+					<li><a href ="browse.html">Ajax</a></li>
+					<li><a href ="browse.html">Jquery</a></li>
+					<li><a href ="browse.html">Web Design</a></li>
+					<li><a href ="browse.html">Web Programming</a></li>
+					<li><a href ="browse.html">Content Creation</a></li>
+					<li><a href ="browse.html">Internet Marketing</a></li>
+					<li><a href ="browse.html">XHTML Templates</a></li>
+				</ul>
+			</nav>
+			
+			<section>
+				
+					<h2>Welcome To Blue Developers Directory</h2>
+					<img class ="float "src="Images/web.jpg" alt ="Directory">
+					<h3>Who Are We ?</h3>
+				
+						<p>We are a fictional website and service that list top web developers around the world. Search and browse fictional web developers on our website absolutley FREE!</p>
+			
+					<h3>What Skills Do Our Developers Have ?</h3>
+				
+						<p>Our listed fictional web developers skill ranges from Graphic design with Photoshop, Illustrator and Fireworks to markup languages like HTML5, XHTML and XML to programming languages such as Javascript, PHP, Python and ASP</p>
+						
+							
+					
+					
+				</section>	
+			
+				
+				
+				<section> 
+					<h2>Latest Blue Developers</h2>
+					
+					<div class="developer">
+						<h4>Adam Sullivan</h4>
+							<ul>
+								<li><strong>Location:</strong> Boston, USA</li>
+								<li><strong>Skills:</strong> HTML/CSS, PHP, ROR</li>
+								<li><strong>Availability:</strong> Full Time</li>
+							</ul>
+						<a href="#">View profile</a>
+					</div>
+					
+					<div class="developer">
+						<h4>Rick Monroe</h4>
+					
+						<ul>
+							<li><strong>Location: </strong> Boston USA</li>
+							<li><strong>Skills: </strong> HTML/CSS, PHP, ROR</li>
+							<li><strong>Availability:</strong> Full-Time
+						</ul>
+						<a href="#">View Profile</a>
+					</div>
+					
+					<div class="developer">
+						<h4>Michael Oliver</h4>
+						<ul>
+							<li><strong>Location: </strong> Boston USA</li>
+							<li><strong>Skills: </strong> HTML/CSS, PHP, ROR</li>
+							<li><strong>Availability:</strong> Full-Time
+						</ul>
+						<a href="#">View Profile</a>
+					</div>
+					
+					<div class="developer">
+						<h4>Megan Jennings</h4>
+						<ul>
+							<li><strong>Location: </strong> Boston USA</li>
+							<li><strong>Skills: </strong> HTML/CSS, PHP, ROR</li>
+							<li><strong>Availability:</strong> Full-Time
+						</ul>
+						<a href="#">View Profile</a>
+					</div>
+		``		
+				<video id="video1" width="500" height="350" controls>
+							<source src="Images/video.mp4" type="video/mp4">
+							Please update your browser.
+					</video>
+					
+					<div style="width:400px" >
+						<button onclick="playPause()" >Play/Pause</button>
+						<button onclick="makeBig()" >Big Screen</button>
+						<button onclick="makeSmall()" >Small Screen</button>
+						<button onclick="makeNormal()" style="color:blue">Normal Screen</button>
+					</div>
+					
+					<script>
+						var myvideo = document.getElementById('video1');
+						function playPause(){
+							if(myvideo.paused){
+								myvideo.play();
+							} else {
+								myvideo.pause();
+							}
+							
+						}
+						
+						function makeBig(){
+							myvideo.width=700;
+						}
+						
+						function makeSmall(){
+							myvideo.width=300;
+						}
+					
+						function makeNormal(){
+							myvideo.width=500;
+						}
+					</script>
+		
+				</section>
+		</div>  <!--container ends-->	
+		<div style="clear:both"></div>
+		<footer>
+		@Aashis
+		</footer>
+	</body>
+</html>
